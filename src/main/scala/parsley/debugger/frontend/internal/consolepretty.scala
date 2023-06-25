@@ -56,11 +56,11 @@ object consolepretty {
       children match {
         case (_, t) :: Nil =>
           helper.bury("|", withMark = false)
-          t.prettyPrint(helper.addBlankIndent())
+          new TreePrinter(t).prettyPrint(helper.addBlankIndent())
           () // XXX: Silences discarded non-unit value warning.
         case (_, t) :: xs  =>
           helper.bury("|", withMark = false)
-          t.prettyPrint(helper.addIndent())
+          new TreePrinter(t).prettyPrint(helper.addIndent())
           printChildren(helper, xs)
         case Nil           => ()
       }
