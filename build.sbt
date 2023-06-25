@@ -6,13 +6,18 @@ inThisBuild(
     version          := "0.1.0-SNAPSHOT",
     organization     := "com.github.0xfc963f18dc21",
     organizationName := "0xfc963f18dc21",
-    javacOptions    ++= Seq("-source", "1.8", "-target", "1.8"),
     scalacOptions   ++= Seq("-deprecation", "-unchecked", "-feature")
   )
 )
 
 // Warning: currently uses the snapshot locally listed on the developer's computer.
-lazy val root = (project in file("."))
+lazy val root = crossProject(JSPlatform, JVMPlatform, NativePlatform)
+  .withoutSuffixFor(JVMPlatform)
+  .crossType(CrossType.Full)
+  .in(file("conui"))
+  .jvmSettings(
+    javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
+  )
   .settings(
     name                := "parsley-debug-conui",
     resolvers          ++= Opts.resolver.sonatypeOssSnapshots,
