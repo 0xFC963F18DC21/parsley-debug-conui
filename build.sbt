@@ -16,7 +16,7 @@ lazy val root = (project in file("."))
   .settings(
     name                := "parsley-debug-conui",
     resolvers          ++= Opts.resolver.sonatypeOssSnapshots,
-    libraryDependencies += "com.github.j-mie6" %% "parsley"       % "4.2-c310861-SNAPSHOT",
-    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.2-c310861-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley"       % "4.2-6cb1ca7-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.2-6cb1ca7-SNAPSHOT",
     libraryDependencies += "org.scalatest"     %% "scalatest"     % "3.2.15" % Test
   )
