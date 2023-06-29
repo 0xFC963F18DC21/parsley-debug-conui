@@ -21,7 +21,7 @@ lazy val root = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .settings(
     name       := "parsley-debug-conui",
     resolvers ++= Opts.resolver.sonatypeOssSnapshots,
-    libraryDependencies += "com.github.j-mie6" %% "parsley" % "4.3-924813b-20230628T140028Z-SNAPSHOT",
-    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.3-924813b-20230628T140028Z-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley" % "4.3-6b9ebe6-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.3-6b9ebe6-SNAPSHOT",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % Test
   )
