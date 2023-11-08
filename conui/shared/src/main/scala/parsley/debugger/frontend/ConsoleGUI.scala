@@ -12,8 +12,8 @@ import parsley.debugger.frontend.internal.consolepretty._
   *
   * Technically not a GUI.
   */
-case object ConsoleGUI extends DebugFrontend {
-  override def process(input: => String, tree: => DebugTree): Unit = {
+case object ConsoleGUI extends StatelessFrontend {
+  override protected def processImpl(input: => String, tree: => DebugTree): Unit = {
     println(s"${tree.parserName}'s parse tree for input:\n\n${input}\n")
     println(tree.pretty)
   }

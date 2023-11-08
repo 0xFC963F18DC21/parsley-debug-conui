@@ -4,8 +4,8 @@ inThisBuild(
   Seq(
     scalaVersion     := "2.13.10",
     version          := "0.1.0-SNAPSHOT",
-    organization     := "com.github.0xfc963f18dc21",
-    organizationName := "0xfc963f18dc21",
+    organization     := "com.github.mf42-dzh",
+    organizationName := "github",
     scalacOptions   ++= Seq("-deprecation", "-unchecked", "-feature")
   )
 )
@@ -21,7 +21,7 @@ lazy val root = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .settings(
     name                := "parsley-debug-conui",
     resolvers          ++= Opts.resolver.sonatypeOssSnapshots,
-    libraryDependencies += "com.github.j-mie6" %% "parsley"       % "4.4-43be0e6-SNAPSHOT",
-    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.4-43be0e6-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley"       % "4.4-7838925-20231108T134517Z-SNAPSHOT",
+    libraryDependencies += "com.github.j-mie6" %% "parsley-debug" % "4.4-7838925-20231108T134517Z-SNAPSHOT",
     libraryDependencies += "org.scalatest"     %% "scalatest"     % "3.2.15" % Test
   )
