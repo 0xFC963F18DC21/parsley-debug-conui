@@ -32,7 +32,7 @@ lazy val root = (project in file("."))
   )
 ```
 
-Currently, this library only works with Scala 2.13.10.
+Currently, this library only works with Scala 2.13.x.
 
 Documentation for usage is a TODO.
 
